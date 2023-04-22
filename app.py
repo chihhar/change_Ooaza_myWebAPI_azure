@@ -64,37 +64,6 @@ def number2kanji_function(number):
     print("".join(result_list))
     return result_list
     
-    
-    
-    
-    # number2kanji_dict={"0":"零","1":"壱","2":"弐","3":"参","4":"四",
-    #                   "5":"五","6":"六","7":"七","8":"八","9":"九"}
-    # keta_dict={0:"",1:"拾",2:"百",3:"千"}
-    # mansin_dict={0:"",1:"万",2:"億",3:"兆"}
-    
-    # reverse_str_number=list(str(int(number)))#整数値からstringのリストに変換
-    # reverse_str_number.reverse()#数値は逆から読む
-    # result_list=[]
-    
-    # mansin_count=0
-    # mansin_flag=False#万進の桁は1つでもあれば追加
-    # for number_ind in range(len(reverse_str_number)):
-    #     change_number=reverse_str_number[number_ind]#変えたい数字
-    #     keta_ind=int(number_ind%4)#4桁区切りで桁を付ける
-        
-    #     if keta_ind==0:#区切り
-    #         if mansin_flag==True:#mansinの桁が1回以上使われる
-    #             result_list.insert(0,mansin_dict[mansin_count])#"","万","億","兆"の呼び出し
-    #         mansin_count+=1
-    #         mansin_flag=False
-    #     if change_number !="0":#
-    #         mansin_flag=True
-    #         result_list.insert(0,keta_dict[keta_ind])#千百拾
-    #         result_list.insert(0,number2kanji_dict[change_number])
-    # if len(result_list)==0:#なにもないなら0
-    #     result_list.insert(0,number2kanji_dict[change_number])  
-    # print(list(filter(None, result_list)))
-    # return result_list
 
 def kanji2number_function(number):
     kanji2number_dict={"零":"0","壱":"1","弐":"2","参":"3","四":"4",
