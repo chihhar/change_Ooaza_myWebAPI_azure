@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kanji2number</title>
+</head>
+<body>
+    <h1>数字2漢字変換フォーム</h1>
+    <form name="myForm">
+		アラビア数字から、大字表記の漢数字に変換します(結果はjsonファイルで出力)<br>
+        例:105 ->{"result":壱百五}<br>
+        0から1京未満の任意の整数を入力してください<br>
+		<input type="text" name="txtURL">
+        
+        <input type="button" value="移動" onclick="Jump();">
+    </form>
+	
+	<input type="button" onclick="location.href='/'" value="戻る">
+	<!---- スクリプト ---->
+    <script type="text/javascript">
+		/*====[ 関数 : URL を取得して移動 ]====*/
+		function Jump(){
+		// テキストを取得して URL を組み立てる
+		var myURL =
+		"/v1/number2kanji/" +
+		document.myForm.txtURL.value;
+		// ページを移動
+		location.href = myURL;
+		return;
+		}
+		</script>
+</body>
+</html>
+</html>

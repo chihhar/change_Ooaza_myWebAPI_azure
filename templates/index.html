@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大字変換API</title>
+</head>
+<body>
+    <h1>数字大字表記変換API</h1>
+    0以上1京未満の任意の整数を入力してください<br><br>
+
+    <form name="myForm">
+        漢字2number 例:壱百五<br>
+        <input type="text" name="txtURL">        
+        <input type="button" value="移動" onclick="Jump();"><br><br>
+    </form>
+    <form name="myForm2">
+        number2漢字 例:0<任意の整数<1京<br>
+        <input type="text" name="numberURL">
+        <input type="button" value="移動" onclick="Jump2();">
+    </form>
+    <!---- スクリプト ---->
+    <script type="text/javascript">
+    /*====[ 関数 : URL を取得して移動 ]====*/
+    function Jump(){
+    // テキストを取得して URL を組み立てる
+    var myURL =
+    "/v1/kanji2number/" +
+    document.myForm.txtURL.value;
+    // ページを移動
+    location.href = myURL;
+    return;
+    }
+    </script>
+    <script type="text/javascript">
+    function Jump2(){
+        // テキストを取得して URL を組み立てる
+        var myURL =
+        "/v1/number2kanji/" +
+        document.myForm2.numberURL.value;
+        // ページを移動
+        location.href = myURL;
+        return;
+        }
+    </script>
+</body>
+</html>
+</html>
